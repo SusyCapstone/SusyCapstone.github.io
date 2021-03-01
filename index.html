@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomorrow will be fine</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body style="text-align: center;">
+    <div id="app">
+        <h1>TOMORROW WILL BE FINE</h1>
+        <div id="video_content">
+            <div v-for="video in video_list" class="video_item">
+                <video controls="controls" autoplay loop>
+                    <source :src="video.path" type="video/mp4" />
+                </video>
+                <p>{{ video.title }}</p>
+            </div>
+        </div>
+        <!-- <div>
+            <video width="320" height="180" controls="controls" autoplay loop>
+                <source src="demo (4).mp4" type="video/mp4" />
+            </video>
+            <video width="320" height="180" controls="controls" autoplay loop>
+                <source src="demo (5).mp4" type="video/mp4" />
+            </video>
+            <video width="320" height="180" controls="controls" autoplay loop>
+                <source src="demo (6).mp4" type="video/mp4" />
+            </video>
+        </div> -->
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                video_list: [{
+                    path: "demo_(1).mp4",
+                    title: "Video"
+                }, {
+                    path: "demo_(2).mp4",
+                    title: "MAX/msp"
+                }, {
+                    path: "demo_(3).mp4",
+                    title: "P5.js"
+                }, {
+                    path: "demo_(4).mp4",
+                    title: "Reverse video"
+                }, {
+                    path: "demo_(5).mp4",
+                    title: "Animation video"
+                }, {
+                    path: "demo_(6).mp4",
+                    title: "Image"
+                }, ]
+            }
+        })
+    </script>
+    <style>
+        body,
+        html,
+        #app {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            background-color: rgb(213 236 255);
+
+        }
+
+
+        #video_content {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            max-width: 1500px;
+            margin-bottom: 50px;
+        }
+
+        video {
+            width: calc(100% - 20px);
+            margin: 10px;
+            display: block;
+            box-shadow: 3px 1px 25px 0px;
+        }
+
+        @media screen and (orientation: landscape) {
+            .video_item {
+                width: 30%;
+                margin: 15px;
+            }
+
+            #app {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            .video_item {
+                width: 100%;
+                margin: 0 5px;
+            }
+
+            #app {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</body>
+
+</html>

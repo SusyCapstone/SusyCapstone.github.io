@@ -13,8 +13,8 @@
     <div id="app">
         <div style="display: flex;height: 100%;align-items: center;justify-content: center;">
 
-            <video v-if="video.title!='Illustration'" id="vvvvvvv" style="height: 80%;" controls="controls" autoplay
-                loop>
+            <video v-if="video.title!='Illustration'" id="vvvvvvv" style="height: 80%;max-width: 700px;"
+                controls="controls" autoplay loop>
                 <source :src="video.path" />
             </video>
             <img v-else :src="video.path" style="height: 80%;">

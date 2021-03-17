@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;">
-                <div class="title">
+                <div class="title" v-if="video.path=='Illustration.jpg'">
                     {{video.title}}
                 </div>
                 <div style="white-space: pre-line;margin-bottom: 10px;">{{video.introduction}}</div>
@@ -48,15 +48,15 @@
                     introduction: `This is an experimental animation video installation done with Procreate, Max/msp, and P5.js web editor. The central concept is to show how "I" overcome difficulties during the four years in DU and how "I" keep exploring myself as a human(posthuman). I put the process of gradually finding myself into this video. Before joining DU, I described myself as a whimsical grey tone character because I didn't overthink what kind of person I was and who I wanted to be in the future. Joining in DU and EDP program guides me to explore me and what my interest is. When I first came to the U.S., I was as scared and excited about the unfamiliar environment and people, just like the astronauts who had just landed on the moon. As I continued to hone my skills over four years, I gradually explored my character and my future pursuits at this stage. This project expresses this process in multimedia and abstract way.`,
                     path: "index.mp4"
                 }, {
-                    title: "2D animation video introduction",
+                    title: "2D animation video",
                     introduction: "This is the 2D animation video part of this project. The video is done with Procreate, and MAX/msp generates the audio. Mind and body are two integral parts of being a posthuman. It is difficult to say whether the mind leads the body or the body guides the mind. When I was little, I would always fantasize about what I wanted to be in the future. However, as I grew up, I gave up thinking about the future because I was always dealing with various exams and facing multiple pressures. In 2017, I came to the United States alone. The unfamiliar environment and the people I didn't know were like astronauts who had just arrived on the moon. Fortunately, joining the EDP program gradually helped me to be energized. I started to find out what I am interested in and what kind of work I wanted to do in the future. ",
                     path: "2D.mp4"
                 }, {
-                    title: "P5.js Video introduction",
+                    title: "P5.js Video",
                     introduction: "This is the P5.js video part of this project. P5.js is a JS library for users to create interactive and visual projects. I describe myself as a black and white character at first because I didn't know my interests, what I want to be in the future, or know much about myself before I went to college. I describe the process of exploring myself as gradually changing from black and white to color. Of course, opening myself is challenging, and there is a lot of uncertainty and doubt during this process. Finding what makes me interested in and what I want to in the future is the light that illuminates my dark world. This video demonstrates being a human being, and in the process of self-exploration, I was looking for a light, finding it, but being afraid of it. ",
                     path: "p5.js.mp4"
                 }, {
-                    title: "MAX/msp video introduction",
+                    title: "MAX/msp video",
                     introduction: "This is the MAX/msp video part of this project. MAX/msp is a visual programming language for people to create and generate audio and multimedia projects. As I continue to grow, three questions have played an essential role in discovering myself: what do you want? Who do you want to be? Who am I? This is an abstract animated video that expresses how I am constantly questioning myself as I grow up. The colorful moving stones represent the process of breaking out of my cocoon. The outer grid represents the things that bind me as I explore myself.",
                     path: "max.mp4"
                 }, ],
@@ -68,7 +68,7 @@
                         "Who do you love? \n\n" +
                         "Why you choose this job?\n\n" +
                         "What makes you most human? \n\n" +
-                        "What makes you unique? \n\n\n\n" +
+                        "What makes you unique? \n\n\n" +
                         "This project conveys how I explore myself. \n" +
                         "Please click the links below to see more. \n" +
                         "I hope you enjoy it. Thank you!",
@@ -82,7 +82,7 @@
                         "Who do you love? \n\n" +
                         "Why you choose this job?\n\n" +
                         "What makes you most human? \n\n" +
-                        "What makes you unique? \n\n\n\n" +
+                        "What makes you unique? \n\n\n" +
                         "This project conveys how I explore myself. \n" +
                         "Please click the links below to see more. \n" +
                         "I hope you enjoy it. Thank you!",

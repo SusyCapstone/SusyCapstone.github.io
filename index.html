@@ -12,17 +12,23 @@
 <body style="text-align: center;">
     <div id="app">
         <div style="display: flex;height: 100%;align-items: center;justify-content: center;">
-
-            <video v-if="video.title!='Illustration'" id="vvvvvvv" style="height: 80%;max-width: 700px;"
-                controls="controls" autoplay loop>
+            <video v-if="video.path!='Illustration.jpg'" id="vvvvvvv" style="height: 93%;" controls="controls" autoplay
+                loop>
                 <source :src="video.path" />
             </video>
-            <img v-else :src="video.path" style="height: 80%;">
-            <div style="padding:50px;text-align: justify;height: 80%;max-width: 600px;font-size: 20px;">
-                <div style="font-size:1.5em;padding: 20px;font-weight:bold;text-align: center;">
+            <img v-else :src="video.path" style="height: 93%;">
+            <div style="padding:50px;
+            text-align: justify;
+            height: 80%;
+            max-width: 350px;
+            font-size: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;">
+                <div class="title">
                     {{video.title}}
                 </div>
-                <div style="white-space: pre-line;">{{video.introduction}}</div>
+                <div style="white-space: pre-line;margin-bottom: 10px;">{{video.introduction}}</div>
 
                 <div v-if="video.title==index_video.title"
                     style="display: flex;flex-direction: column;justify-content: center;">
@@ -38,6 +44,10 @@
             el: '#app',
             data: {
                 video_list: [{
+                    title: "Video",
+                    introduction: `This is an experimental animation video installation done with Procreate, Max/msp, and P5.js web editor. The central concept is to show how "I" overcome difficulties during the four years in DU and how "I" keep exploring myself as a human(posthuman). I put the process of gradually finding myself into this video. Before joining DU, I described myself as a whimsical grey tone character because I didn't overthink what kind of person I was and who I wanted to be in the future. Joining in DU and EDP program guides me to explore me and what my interest is. When I first came to the U.S., I was as scared and excited about the unfamiliar environment and people, just like the astronauts who had just landed on the moon. As I continued to hone my skills over four years, I gradually explored my character and my future pursuits at this stage. This project expresses this process in multimedia and abstract way.`,
+                    path: "index.mp4"
+                }, {
                     title: "2D animation video introduction",
                     introduction: "This is the 2D animation video part of this project. The video is done with Procreate, and MAX/msp generates the audio. Mind and body are two integral parts of being a posthuman. It is difficult to say whether the mind leads the body or the body guides the mind. When I was little, I would always fantasize about what I wanted to be in the future. However, as I grew up, I gave up thinking about the future because I was always dealing with various exams and facing multiple pressures. In 2017, I came to the United States alone. The unfamiliar environment and the people I didn't know were like astronauts who had just arrived on the moon. Fortunately, joining the EDP program gradually helped me to be energized. I started to find out what I am interested in and what kind of work I wanted to do in the future. ",
                     path: "2D.mp4"
@@ -49,20 +59,34 @@
                     title: "MAX/msp video introduction",
                     introduction: "This is the MAX/msp video part of this project. MAX/msp is a visual programming language for people to create and generate audio and multimedia projects. As I continue to grow, three questions have played an essential role in discovering myself: what do you want? Who do you want to be? Who am I? This is an abstract animated video that expresses how I am constantly questioning myself as I grow up. The colorful moving stones represent the process of breaking out of my cocoon. The outer grid represents the things that bind me as I explore myself.",
                     path: "max.mp4"
-                }, {
-                    title: "Illustration",
-                    introduction: "I drew an illustration based on the theme of the video project: Exploring myself. In this illustration, the unadorned girl's face with the traditional Chinese lion dance decoration represents that I am from the East. The fading starry sky covering the girl's face represents my process of exploring myself. The completely clear part represents the part of me that I already know about myself, and the covered part represents the part that I am still exploring.",
-                    path: "Illustration.jpg"
                 }, ],
                 index_video: {
                     title: "TOMORROW WILL BE FINE",
-                    introduction: `This is an experimental animation video installation done with Procreate, Max/msp, and P5.js web editor. The central concept is to show how "I" overcome difficulties during the four years in DU and how "I" keep exploring myself as a human(posthuman). I put the process of gradually finding myself into this video. Before joining DU, I described myself as a whimsical grey tone character because I didn't overthink what kind of person I was and who I wanted to be in the future. Joining in DU and EDP program guides me to explore me and what my interest is. When I first came to the U.S., I was as scared and excited about the unfamiliar environment and people, just like the astronauts who had just landed on the moon. As I continued to hone my skills over four years, I gradually explored my character and my future pursuits at this stage. This project expresses this process in multimedia and abstract way. You can click on different components of this video on the left side to see more details. I hope you enjoy it. Thank you! `,
-                    path: "index.mp4"
+                    introduction: "\nHave you ever wondered what color of the star you are?\n\n" +
+                        "Do you know what you want to do in the future when you are 18?\n\n" +
+                        "What are your hobbies?\n\n" +
+                        "Who do you love? \n\n" +
+                        "Why you choose this job?\n\n" +
+                        "What makes you most human? \n\n" +
+                        "What makes you unique? \n\n\n\n" +
+                        "This project conveys how I explore myself. \n" +
+                        "Please click the links below to see more. \n" +
+                        "I hope you enjoy it. Thank you!",
+                    path: "Illustration.jpg"
                 },
                 video: {
                     title: "TOMORROW WILL BE FINE",
-                    introduction: `This is an experimental animation video installation done with Procreate, Max/msp, and P5.js web editor. The central concept is to show how "I" overcome difficulties during the four years in DU and how "I" keep exploring myself as a human(posthuman). I put the process of gradually finding myself into this video. Before joining DU, I described myself as a whimsical grey tone character because I didn't overthink what kind of person I was and who I wanted to be in the future. Joining in DU and EDP program guides me to explore me and what my interest is. When I first came to the U.S., I was as scared and excited about the unfamiliar environment and people, just like the astronauts who had just landed on the moon. As I continued to hone my skills over four years, I gradually explored my character and my future pursuits at this stage. This project expresses this process in multimedia and abstract way. You can click on different components of this video on the left side to see more details. I hope you enjoy it. Thank you! `,
-                    path: "index.mp4"
+                    introduction: "\nHave you ever wondered what color of the star you are?\n\n" +
+                        "Do you know what you want to do in the future when you are 18?\n\n" +
+                        "What are your hobbies?\n\n" +
+                        "Who do you love? \n\n" +
+                        "Why you choose this job?\n\n" +
+                        "What makes you most human? \n\n" +
+                        "What makes you unique? \n\n\n\n" +
+                        "This project conveys how I explore myself. \n" +
+                        "Please click the links below to see more. \n" +
+                        "I hope you enjoy it. Thank you!",
+                    path: "Illustration.jpg"
                 }
             },
             methods: {
@@ -91,14 +115,26 @@
 
         #app {
             height: calc(100% - 20px);
+            background-image: url('index.jpg');
+            background-repeat: repeat;
+            background-size: auto 100%;
         }
 
         a {
             margin: 3px 0;
+            text-align: center;
+            color: aqua;
         }
 
         .el-link--inner {
             font-size: 20px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            padding-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
         }
     </style>
 </body>

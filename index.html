@@ -31,7 +31,7 @@
                 <div style="white-space: pre-line;margin-bottom: 10px;">{{video.introduction}}</div>
 
                 <div v-if="video.title==index_video.title"
-                    style="display: flex;flex-direction: column;justify-content: center;">
+                    style="display: flex;flex-direction: column;justify-content: center;margin-top: 20px;">
                     <a v-for="(item,index) in video_list" href="javascript:void(0);"
                         @click="index_changed(index)">{{item.title}}</a>
                 </div>
